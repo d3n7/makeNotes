@@ -70,6 +70,6 @@ for i in chunks:
     temp = open(gptResponsePath, 'a').write("------------------CHUNK #{}------------------\n\n{}\n\n".format(chunkCount,response))
     chunkCount += 1
 #calculate reduction of size and add it to the log
-temp = open(gptResponsePath, 'a').write("--------REDUCED BY {}% ({} to {} words)--------".format((wordsLen-gptLen)/float(wordsLen), wordsLen, gptLen))
+temp = open(gptResponsePath, 'a').write("--------REDUCED BY {}% ({} to {} words)--------".format((wordsLen-gptLen)/float(wordsLen)*100, wordsLen, gptLen))
 print("[*] All done and saved to gptresponses.txt...")
 print("----[-] If you don't want it overwritten, copy it somewhere else.")
