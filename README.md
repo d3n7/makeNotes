@@ -6,7 +6,9 @@ A python script that combines OpenAI's Whisper and Chat-GPT to summarize audio f
 
 # Install dependencies:
 Use the instructions from these two github repos to install Whisper and Chat-GPT Wrapper in one or two commands:
+
 https://github.com/mmabrouk/chatgpt-wrapper
+
 https://github.com/openai/whisper
 
 # How to:
