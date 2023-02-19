@@ -1,0 +1,15 @@
+------------------summarized from 3 chunks of 3000 words------------------
+
+Using Prompt, "Here's a quote from a lecture that I'm sending you in pieces. Make a detailed summary: "
+
+------------------CHUNK #1------------------
+
+Unusable response produced, maybe login session expired. Try 'pkill firefox' and 'chatgpt install'
+
+------------------CHUNK #2------------------
+
+Unusable response produced, maybe login session expired. Try 'pkill firefox' and 'chatgpt install'
+
+------------------CHUNK #3------------------
+
+The lecture discusses Michel Foucault's radical ideas and how he was unafraid to express controversial opinions. Foucault had a strong belief in human freedom and aimed to abolish societal categories that perpetuated oppression, such as transgression, madness, and criminality. The lecture describes how he sought to unify his beliefs with his practice and criticized the social construct of marginality, including sexuality. Foucault believed that society constructs marginality, and in his "History of Sexuality," he argued that homosexuality was a modern idea and that heterosexuality and all sexuality is socially constructed. Foucault's work is seen as a way to move beyond nature and societal limitations by questioning the categories that we use to understand the world. Although some criticize Foucault's work as an attempt to evade nature, the lecture highlights the importance of his ideas in challenging the power structures that perpetuate societal norms.
