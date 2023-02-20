@@ -44,13 +44,13 @@ words = transcription.split(" ")
 wordsLen = len(words) #for later calculation of reduction
 chunks = []
 while (len(words) > 0):
-    wordString = ""
     wordChunk = words[:chunkSize]
     del words[:chunkSize]
     #make sure it doesn't cut off mid-sentence
     while not (wordChunk[-1].endswith(".") or wordChunk[-1].endswith("!") or wordChunk[-1].endswith("?")):
         wordChunk.append(words[0])
         del words[0]
+    wordString = ""
     for j, i in enumerate(wordChunk):
         wordString += i+" "*(j!=len(wordChunk)-1)
     chunks.append(wordString)
