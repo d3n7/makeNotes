@@ -12,9 +12,11 @@ https://github.com/mmabrouk/chatgpt-wrapper
 https://github.com/openai/whisper
 
 # How to:
-1. Open up notes.py to customize your settings
+1. Open up notes.py to customize your settings (change loadTranscription to True if you want to run it using previously generated transcription)
 2. Place your audio in the makeNotes folder name it "samp.mp3" (or wav, flac, aiff, whatever's in your settings)
 3. Run the script and enjoy
+![example](https://github.com/d3n7/makeNotes/blob/main/exampleOutput.png?raw=True)
+
 
 # Troubleshooting:
 In most cases where there's issue with the Chat-GPT Wrapper, you can do the following to fix it:
