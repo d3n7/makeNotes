@@ -55,7 +55,7 @@ print("[*] Chunked into {} chunks of {} words".format(len(chunks),chunkSize))
 #ChatGPT time
 print("[*] Loading ChatGPT Client...")
 bot = ChatGPT()
-bot.refresh_session()
+bot.new_conversation()
 gptChunks = []
 temp = open(gptResponsePath, 'w').write("------------------summarized from {} chunks of {} words------------------\n\nUsing Prompt, \"{}\"\n".format(len(chunks),chunkSize, preprompt)) #erase previous file
 #Retrieve chunks, display them, and log them
