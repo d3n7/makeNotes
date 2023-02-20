@@ -28,7 +28,7 @@ gptResponsePath = "{}/{}".format(path, "gptresponses.txt")
 #Make or load transcription
 if loadTranscription:
     print("[*] Loading transcription...")
-    transcription = open('/Users/cameronglass/makeNotes/transcription.txt', 'r').readlines()[0]
+    transcription = open(transcriptionPath, 'r').readlines()[0]
 else:
     print("[*] Loading OpenAI Whisper model...")
     model = whisper.load_model("base")
