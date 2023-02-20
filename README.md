@@ -3,6 +3,7 @@ A python script that combines OpenAI's Whisper and Chat-GPT to summarize audio f
 - Custom prompt (task)
 - Custom chunk size (how many words you feed GPT-3 at once)
 - Generate or load transcription (for reuse with the same audio)
+![example](https://github.com/d3n7/makeNotes/blob/main/exampleOutput.png?raw=True)
 
 # Install dependencies:
 Use the instructions from these two github repos to install Whisper and Chat-GPT Wrapper in one or two commands:
@@ -15,7 +16,6 @@ https://github.com/openai/whisper
 1. Open up notes.py to customize your settings (change loadTranscription to True if you want to run it using previously generated transcription)
 2. Place your audio in the makeNotes folder name it "samp.mp3" (or wav, flac, aiff, whatever's in your settings)
 3. Run the script and enjoy
-![example](https://github.com/d3n7/makeNotes/blob/main/exampleOutput.png?raw=True)
 
 
 # Troubleshooting:
