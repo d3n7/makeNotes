@@ -5,7 +5,7 @@ from chatgpt_wrapper import ChatGPT
 ###############################################################################################
 ###############################################################################################
 #How you want note taker to behave. Gets repeated at the beginning of every chunk.
-preprompt = "Here's an excerpt from a lecture that I'm sending you in pieces. Make a summary of this exceprt: "
+preprompt = "Here's an excerpt from a lecture that I'm sending you in pieces. Make a summary of this excerpt: "
 
 #how many words of text you want to feed to Chat-GPT at at time
 #(there's a limit, I think at 4000 tokens (roughly 3000 words.)
@@ -14,7 +14,7 @@ chunkSize = 1000
 #false means it will generate a new transcription, true means it will load it from transcription.txt
 loadTranscription = False
 
-#file extension of your audio sample named "samp"
+#file extension of your audio sample
 audExtension = "mp3"
 ###############################################################################################
 ###############################################################################################
@@ -44,20 +44,24 @@ words = transcription.split(" ")
 wordsLen = len(words) #for later calculation of reduction
 chunks = []
 while (len(words) > 0):
-    wordChunk = words[:chunkSize]
     wordString = ""
-    for i in wordChunk:
-        wordString += i+" "
-    chunks.append(wordString)
+    wordChunk = words[:chunkSize]
     del words[:chunkSize]
-print("[*] Chunked into {} chunks of {} words".format(len(chunks),chunkSize))
+    #make sure it doesn't cut off mid-sentence
+    while not (wordChunk[-1].endswith(".") or wordChunk[-1].endswith("!") or wordChunk[-1].endswith("?")):
+        wordChunk.append(words[0])
+        del words[0]
+    for j, i in enumerate(wordChunk):
+        wordString += i+" "*(j!=len(wordChunk)-1)
+    chunks.append(wordString)
+print("[*] Chunked into {} chunks of roughly {} words".format(len(chunks),chunkSize))
 
 #ChatGPT time
 print("[*] Loading ChatGPT Client...")
 bot = ChatGPT()
 bot.new_conversation()
 gptChunks = []
-temp = open(gptResponsePath, 'w').write("------------------summarized from {} chunks of {} words------------------\n\nUsing Prompt, \"{}\"\n".format(len(chunks),chunkSize, preprompt)) #erase previous file
+temp = open(gptResponsePath, 'w').write("------------------summarized from {} chunks of roughly {} words------------------\n\nUsing Prompt, \"{}\"\n".format(len(chunks),chunkSize, preprompt)) #erase previous file
 #Retrieve chunks, display them, and log them
 print("----[-] Using Prompt, \"{}\"\n".format(preprompt))
 chunkCount = 1
