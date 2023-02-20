@@ -14,7 +14,7 @@ chunkSize = 1000
 #false means it will generate a new transcription, true means it will load it from transcription.txt
 loadTranscription = False
 
-#file extension of your audio sample
+#file extension of your audio sample named "samp"
 audExtension = "mp3"
 ###############################################################################################
 ###############################################################################################
