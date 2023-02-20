@@ -5,7 +5,7 @@ from chatgpt_wrapper import ChatGPT
 ###############################################################################################
 ###############################################################################################
 #How you want note taker to behave. Gets repeated at the beginning of every chunk.
-preprompt = "Here's a quote from a lecture that I'm sending you in pieces. Make a detailed summary: "
+preprompt = "Here's an excerpt from a lecture that I'm sending you in pieces. Make a summary of this exceprt: "
 
 #how many words of text you want to feed to Chat-GPT at at time
 #(there's a limit, I think at 4000 tokens (roughly 3000 words.)
